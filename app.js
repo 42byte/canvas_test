@@ -43,6 +43,7 @@ function stopUpdate() {
     window.clearTimeout(updateFrame);
 }
 
+//TESTING
 
 
 
