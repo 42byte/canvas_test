@@ -28,22 +28,21 @@ function createGrid() {
 
 createGrid();
 
-
 let a = 0;
 
-function update() {
+var updateFrame;
+//updateFrame = setTimeout(update, 500);
+
+function startUpdate() {
     console.log(a);
     a += 1;
-
-    updateFrame = requestAnimationFrame(update);
+    updateFrame = setTimeout(startUpdate, 500);
 }
 
 function stopUpdate() {
-    window.cancelAnimationFrame(updateFrame);
+    window.clearTimeout(updateFrame);
 }
 
-var updateFrame;
-updateFrame = requestAnimationFrame(update);
 
 
 
